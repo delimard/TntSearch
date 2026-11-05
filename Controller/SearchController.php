@@ -72,7 +72,7 @@ class SearchController extends BaseAdminController
             $rows[] = [
                 'id' => $customer->getId(),
                 'ref' => $customer->getRef(),
-                'company' => $customer->getCompany(),
+                'company' => $customer->getDefaultAddress()?->getCompany(),
                 'firstname' => $customer->getFirstname(),
                 'lastname' => $customer->getLastname(),
                 'email' => $customer->getEmail(),
